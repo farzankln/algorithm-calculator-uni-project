@@ -13,9 +13,3 @@ This project is a web-based application that simulates various CPU scheduling al
 - **Next.js** – React-based framework for SSR and routing.
 - **TypeScript** – Ensures type safety and better development experience.
 - **Tailwind CSS** – Provides a clean and responsive UI.
-
-## Project Structure
-- `components/` – UI components for displaying results and forms.
-- `utils/` – Functions implementing scheduling algorithms.
-- `pages/` – Next.js pages for different algorithms.
-- `types/` – Type definitions for process structures.
