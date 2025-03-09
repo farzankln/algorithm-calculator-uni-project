@@ -26,7 +26,6 @@ export function calculateSRTF(processes: Process[]): ProcessResult[] {
     }
 
     if (idx === -1) {
-      // پرش به نزدیک‌ترین arrivalTime بعدی
       const nextArrival = processes
         .filter((p, i) => !isCompleted[i])
         .map((p) => p.arrivalTime)
@@ -35,7 +34,7 @@ export function calculateSRTF(processes: Process[]): ProcessResult[] {
       if (nextArrival.length > 0) {
         currentTime = Math.min(...nextArrival);
       } else {
-        break; // هیچ فرآیندی باقی‌نمانده
+        break;
       }
       continue;
     }
@@ -55,7 +54,7 @@ export function calculateSRTF(processes: Process[]): ProcessResult[] {
     const waitingTime = turnaroundTime - process.runTime;
     return {
       ...process,
-      startTime: process.arrivalTime, // یا می‌تونیم اولین شروع واقعی رو ذخیره کنیم
+      startTime: process.arrivalTime,
       finishTime: completionTime[i],
       turnaroundTime,
       waitingTime,

@@ -5,7 +5,7 @@ import { ProcessResult } from "@/types/result";
 export function calculateRR(
   processes: Process[],
   quantum: number,
-  contextSwitchTime: number // اضافه کردن پارامتر جدید
+  contextSwitchTime: number
 ): ProcessResult[] {
   let currentTime = 0;
   const queue = [...processes];
@@ -20,7 +20,6 @@ export function calculateRR(
       quantum
     );
 
-    // افزودن زمان تعویض اگر پروسس قبلی متفاوت باشد
     if (lastProcessId && lastProcessId !== process.id) {
       currentTime += contextSwitchTime;
     }

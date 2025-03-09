@@ -3,8 +3,8 @@ import { ProcessResult } from "@/types/result";
 
 export function calculateHRRN(processes: Process[]): ProcessResult[] {
   let currentTime = 0;
-  const remainingProcesses = [...processes]; // تغییر به const
-  const result: ProcessResult[] = []; // تغییر به const
+  const remainingProcesses = [...processes]; 
+  const result: ProcessResult[] = [];
 
   while (remainingProcesses.length > 0) {
     let highestRr = -Infinity;

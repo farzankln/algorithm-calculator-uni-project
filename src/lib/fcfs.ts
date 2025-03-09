@@ -4,7 +4,6 @@ import { ProcessResult } from "@/types/result";
 export function calculateFCFS(processes: Process[]): ProcessResult[] {
   let currentTime = 0;
 
-  // Sort by arrivalTime and then by id
   const sortedProcesses = [...processes].sort((a, b) => {
     if (a.arrivalTime === b.arrivalTime) {
       return parseInt(a.id) - parseInt(b.id);

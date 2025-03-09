@@ -5,7 +5,6 @@ export default function ResultTable({
 }: {
   processes: ProcessResult[];
 }) {
-  // محاسبه میانگین‌ها
   const totalStart = processes.reduce((sum, p) => sum + p.startTime, 0);
   const totalWaiting = processes.reduce((sum, p) => sum + p.waitingTime, 0);
   const totalTurnaround = processes.reduce(
